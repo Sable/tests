@@ -1,0 +1,9 @@
+#!/bin/sh
+
+for i in *.java;
+do
+java polyglot.main.Main -sx java -ext jl5 -c -d ./polyout/ $i;
+if [ "$?" -eq "0" ]; then
+    echo $i "FAILED";
+fi    
+done
