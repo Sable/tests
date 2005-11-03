@@ -1,0 +1,6 @@
+#!/bin/sh
+
+for i in *.java;
+do
+java polyglot.main.Main -sx java -ext jl5 -c -d ./polyout/ -assert $i;
+done
